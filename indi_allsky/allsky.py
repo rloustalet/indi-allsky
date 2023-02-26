@@ -836,9 +836,9 @@ class IndiAllSky(object):
 
         if self.config['CAMERA_SERVER'] in ['indi_rpicam']:
             # Raspberry PI HQ Camera requires an initial throw away exposure of over 6s
-            # in order to take exposures longer than 7s
+            # in order to take exposures longer than 6s
             logger.info('Taking throw away exposure for rpicam')
-            self.shoot(7.0, sync=True, timeout=20.0)
+            self.shoot(6.0, sync=True, timeout=20.0)
 
 
     def periodic_reconfigure(self):
